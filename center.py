@@ -15,6 +15,7 @@ loop_max = 1000  # 最大迭代次数(防止死循环)
 epsilon = 1e-6  # 设置阈值
 xb = start
 x = start
+
 #GD训练过程
 for i in range(loop_max):
     loss1 = loss(x, all_points)  # 梯度更新前的损失函数值
@@ -28,7 +29,28 @@ for i in range(loop_max):
     else:
         break
     xb = vstack((xb, x))
+
+c = x
+
+pl.plot(all_points[:, 0], all_points[:, 1], 'g.')
+pl.plot(xb[:, 0], xb[:, 1], 'r.')
+pl.plot(xb[:, 0], xb[:, 1], 'k-')
+pl.xlabel('GD c = (%.3f, %.3f)' % (c[0], c[1]))
+
+pl.show()
+
+print(c)
+
 #SGD训练过程
+
+
+start = array([0, 1])  # 出发点
+lr = 0.08  # 学习率
+loop_max = 1000  # 最大迭代次数(防止死循环)
+epsilon = 1e-8  # 设置阈值
+xs = start
+x = start
+
 for i in range(loop_max):
     from random import choice
 
@@ -43,49 +65,28 @@ for i in range(loop_max):
         lr = lr * 0.5
     else:
         break
-    xb = vstack((xb, x))
+    xs = vstack((xs, x))
 
 c = x
 
 pl.plot(all_points[:, 0], all_points[:, 1], 'g.')
-pl.plot(xb[:, 0], xb[:, 1], 'r.')
-pl.plot(xb[:, 0], xb[:, 1], 'k-')
-pl.xlabel('c = (%.3f, %.3f)' % (c[0], c[1]))
+pl.plot(xs[:, 0], xs[:, 1], 'b.')
+pl.plot(xs[:, 0], xs[:, 1], 'k-')
+pl.xlabel('SGD c = (%.3f, %.3f)' % (c[0], c[1]))
 
 pl.show()
 
 print(c)
-#
-# x = array([0, 1])  # 出发点
-#
-# lr = 0.08  # 学习率
-# xb = x
-# loop_max = 10000  # 最大迭代次数(防止死循环)
-# epsilon = 1e-8
-#
-# for i in range(loop_max):
-#     from random import choice
-#
-#     r = choice(all_points)
-#     loss1 = loss(x, all_points)
-#     xi = x - lr * SGD(x, r)
-#     lossi = loss(xi, all_points)
-#     if loss1 - lossi > epsilon:
-#         x = xi
-#         loss1 = lossi
-#     elif lossi - loss1 > epsilon:
-#         lr = lr * 0.5
-#     else:
-#         break
-#     xb = vstack((xb, x))
-#
-# c = x
-#
-# pl.plot(all_points[:, 0], all_points[:, 1], 'g.')
-# pl.plot(xb[:, 0], xb[:, 1], 'r.')
-# pl.plot(xb[:, 0], xb[:, 1], 'k-')
-# pl.xlabel('c = (%.3f, %.3f)' % (c[0], c[1]))
-#
-# pl.show()
-#
-# print(c)
+
+c = x
+
+pl.plot(all_points[:, 0], all_points[:, 1], 'g.')
+pl.plot(xs[:, 0], xs[:, 1], 'b.')
+pl.plot(xs[:, 0], xs[:, 1], 'k-')
+pl.plot(xb[:, 0], xb[:, 1], 'r.')
+pl.plot(xb[:, 0], xb[:, 1], 'k-')
+pl.xlabel('SGD vs. GD c = (%.3f, %.3f)' % (c[0], c[1]))
+
+pl.show()
+
+print(c)
