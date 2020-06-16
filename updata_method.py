@@ -6,6 +6,12 @@ def Normalization(dx , dy):
     dy = dy / s
     return array([dx, dy])
 
+def mini_batch_GD(c, points):
+    dx = sum((c[0] - points[:, 0]) / sum((c - points) ** 2, axis=1) ** 0.5)  # 求x偏导数
+    dy = sum((c[1] - points[:, 1]) / sum((c - points) ** 2, axis=1) ** 0.5)  # 求y偏导数
+    res= Normalization(dx,dy)
+    return res # 得到梯度向量
+
 def SGD(c, r):
     dx = (c[0] - r[0]) / sum((c - r) ** 2) ** 0.5 #求x偏导数
     dy = (c[1] - r[1]) / sum((c - r) ** 2) ** 0.5 #求y偏导数
