@@ -1,0 +1,923 @@
+app:
+  description: 根据输入的行业名称名称生成行业知识html文件
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: 行业知识
+  use_icon_as_answer_icon: false
+kind: app
+version: 0.1.2
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: ''
+    id: 6d8220db-c853-4142-8905-3fb583b166ae
+    name: tst
+    value: '1'
+    value_type: string
+  features:
+    file_upload:
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-1726190542412-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '1726190542412'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 1726190542412-source-1726190847391-target
+      source: '1726190542412'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: end
+      id: 1726190847391-source-1726190866144-target
+      source: '1726190847391'
+      sourceHandle: source
+      target: '1726190866144'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-1726190953702-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '1726190953702'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 1726190953702-source-1726190847391-target
+      source: '1726190953702'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-17261917186710-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '17261917186710'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 17261917186710-source-1726190847391-target
+      source: '17261917186710'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-17261917453590-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '17261917453590'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-17261917449580-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '17261917449580'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-17261917446250-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '17261917446250'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 17261917453590-source-1726190847391-target
+      source: '17261917453590'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 17261917449580-source-1726190847391-target
+      source: '17261917449580'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 17261917446250-source-1726190847391-target
+      source: '17261917446250'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-17261917442500-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '17261917442500'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-17261928705600-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '17261928705600'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-17261928701020-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '17261928701020'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1726190396183-source-17261928696840-target
+      source: '1726190396183'
+      sourceHandle: source
+      target: '17261928696840'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 17261917442500-source-1726190847391-target
+      source: '17261917442500'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 17261928705600-source-1726190847391-target
+      source: '17261928705600'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 17261928701020-source-1726190847391-target
+      source: '17261928701020'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 17261928696840-source-1726190847391-target
+      source: '17261928696840'
+      sourceHandle: source
+      target: '1726190847391'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - label: 行业名称
+          max_length: 48
+          options: []
+          required: true
+          type: text-input
+          variable: industry
+      height: 90
+      id: '1726190396183'
+      position:
+        x: 30
+        y: 249
+      positionAbsolute:
+        x: 30
+        y: 249
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - edition_type: basic
+          id: 06a61806-2d1d-4702-8f1a-27b9f0c65df8
+          role: system
+          text: "```xml\n<instruction>\n    <instructions>\n        你是一个{{#1726190396183.industry#}}行业的资深咨询师，精通企业组织架构，业务架构，数据架构，技术架构和应用架构，特别擅长通信和信息技术。请按照以下步骤完成任务：\n\
+            \        1. 确定你要研究的行业，并将其名称替换到提示中。\n        2. 查询该行业相关的权威网站，例如政府机构、行业协会、主流行业媒体等，收集关于该行业的定义和相关信息。\n\
+            \        3. 查阅相关书籍，获取更深入的行业背景和数据。\n        4. 整合你查询到的资料，形成一段简要的行业定义，包括行业提供的服务、涉及的领域、全球GDP占比及其在国民经济中的重要性和作用。\n\
+            \        5. 确保输出内容不包含任何XML标签。\n    </instructions>\n    \n    <examples>\n\
+            \        <example>\n            <input>\n                行业：金融服务\n   \
+            \         </input>\n            <output>\n                金融服务行业是一个提供银行、保险、投资等服务的行业，包括个人金融、企业金融和资本市场等领域。在全球范围内，金融服务行业占GDP约7%左右，是国民经济的重要组成部分，具有促进经济增长和资源配置的作用。\n\
+            \            </output>\n        </example>\n        \n        <example>\n\
+            \            <input>\n                行业：信息技术\n            </input>\n\
+            \            <output>\n                信息技术行业是一个提供软件开发、系统集成、IT咨询等服务的行业，包括云计算、大数据和人工智能等领域。在全球范围内，信息技术行业占GDP约10%左右，是国民经济的重要组成部分，推动了数字化转型和创新发展。\n\
+            \            </output>\n        </example>\n        \n        <example>\n\
+            \            <input>\n                行业：医疗健康\n            </input>\n\
+            \            <output>\n                医疗健康行业是一个提供医疗服务、药品研发和健康管理等服务的行业，包括医院、制药公司和健康保险等领域。在全球范围内，医疗健康行业占GDP约9%左右，是国民经济的重要组成部分，保障了人民的健康和生活质量。\n\
+            \            </output>\n        </example>\n    </examples>\n</instruction>\n\
+            ```"
+        selected: false
+        title: 定义
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '1726190542412'
+      position:
+        x: 334
+        y: 249
+      positionAbsolute:
+        x: 334
+        y: 249
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 2c4d428b-ccb0-4bda-8034-8faf84b4dee9
+          role: system
+          text: 你是一个本文处理专家，请按照顺序将{{#1726190542412.text#}}，{{#1726190953702.text#}},{{#17261917186710.text#}},{{#17261917453590.text#}},{{#17261917449580.text#}},{{#17261917446250.text#}},{{#17261917442500.text#}},{{#17261928705600.text#}},{{#17261928701020.text#}},{{#17261928696840.text#}}合并输出到一个html文件中
+        selected: false
+        title: 合并
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '1726190847391'
+      position:
+        x: 639.4285714285714
+        y: 801
+      positionAbsolute:
+        x: 639.4285714285714
+        y: 801
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1726190847391'
+          - text
+          variable: result
+        selected: false
+        title: 结束
+        type: end
+      height: 90
+      id: '1726190866144'
+      position:
+        x: 942
+        y: 801
+      positionAbsolute:
+        x: 942
+        y: 801
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            response_format: ''
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n    <instructions>\n        1. 作为一个资深咨询师，首先明确你所处的{{#1726190396183.industry#}}行业，并确保你对该行业的组织架构、业务架构、数据架构、技术架构和应用架构有深入的理解。\n\
+            \        2. 列出{{#1726190396183.industry#}}行业的主要领域，确保每个领域的定义和作用清晰明了。\n\
+            \        3. 在描述每个领域时，提供具体的例子和应用场景，以便更好地理解其重要性和功能。\n        4. 如果有相关的引用或参考资料，请一一列出，并确保引用格式正确。\n\
+            \        5. 输出内容时，请确保不包含任何XML标签，保持文本的清晰和简洁。\n    </instructions>\n   \
+            \ \n    <examples>\n        <example>\n            <input>\n         \
+            \       行业: 通信和信息技术\n            </input>\n            <output>\n    \
+            \            主要领域包括：\n                1. 网络架构：负责设计和管理网络基础设施，确保数据传输的高效性和安全性。\n\
+            \                2. 数据管理：涉及数据的存储、处理和分析，支持业务决策和运营优化。\n                3.\
+            \ 应用开发：专注于软件应用的设计和开发，以满足用户需求和市场变化。\n                引用：Smith, J. (2020).\
+            \ \"The Future of IT Architecture\". Tech Journal.\n            </output>\n\
+            \        </example>\n        \n        <example>\n            <input>\n\
+            \                行业: 金融服务\n            </input>\n            <output>\n\
+            \                主要领域包括：\n                1. 风险管理：评估和管理金融风险，确保企业的财务稳定性。\n\
+            \                2. 客户关系管理：优化客户体验和满意度，提升客户忠诚度。\n                3. 合规管理：确保企业遵循法律法规，降低法律风险。\n\
+            \                引用：Johnson, L. (2019). \"Risk Management in Finance\"\
+            . Finance Review.\n            </output>\n        </example>\n       \
+            \ \n        <example>\n            <input>\n                行业: 制造业\n\
+            \            </input>\n            <output>\n                主要领域包括：\n\
+            \                1. 生产管理：优化生产流程，提高生产效率和产品质量。\n                2. 供应链管理：协调供应商和分销商，确保原材料和产品的及时交付。\n\
+            \                3. 质量控制：监测和改善产品质量，确保符合行业标准。\n                引用：Williams,\
+            \ R. (2021). \"Manufacturing Excellence\". Industry Insights.\n      \
+            \      </output>\n        </example>\n    </examples>\n</instruction>\n\
+            ```"
+        selected: false
+        title: 领域
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '1726190953702'
+      position:
+        x: 339.7142857142857
+        y: 385.57142857142856
+      positionAbsolute:
+        x: 339.7142857142857
+        y: 385.57142857142856
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n  <instructions>\n    你是一个{{#1726190396183.industry#}}行业的资深咨询师，精通企业组织架构，业务架构，数据架构，技术架构和应用架构，特别擅长通信和信息技术。请按照以下步骤完成任务：\n\
+            \    1. 确定行业的名称，并在后续内容中使用该行业名称。\n    2. 列出该行业涉及的主要组织机构，包括但不限于政府机构、行业协会、企业、研究机构等。\n\
+            \    3. 对于每个组织机构，描述其主要功能和职责。\n    4. 说明不同组织机构之间的关系，例如合作、竞争或监管关系。\n   \
+            \ 5. 提供每类机构的数量估算，尽可能使用最新的数据。\n    6. 列出一些世界知名的组织机构作为示例，确保这些机构在该行业内具有代表性。\n\
+            \    7. 如果引用了任何数据或信息，请确保逐一列出引用来源。\n    8. 输出内容应清晰、结构化，并避免使用任何XML标签。\n\
+            \  </instructions>\n  \n  <examples>\n    <example>\n      <input>\n \
+            \       行业：金融服务\n      </input>\n      <output>\n        金融服务行业涉及的组织机构包括：\
+            \ \n        1. 银行：提供存款、贷款和其他金融服务。 \n        2. 证券公司：负责股票和债券的交易。 \n   \
+            \     3. 保险公司：提供风险管理和保险服务。 \n        4. 监管机构：如中央银行，负责行业监管和政策制定。 \n   \
+            \     这些机构之间的关系包括监管与被监管的关系，合作关系等。 \n        例如，摩根大通（银行）、高盛（证券公司）、美国国际集团（保险公司）等。\n\
+            \      </output>\n    </example>\n    \n    <example>\n      <input>\n\
+            \        行业：医疗保健\n      </input>\n      <output>\n        医疗保健行业涉及的组织机构包括：\n\
+            \        1. 医院：提供医疗服务和急救。\n        2. 诊所：提供初级医疗服务。\n        3. 制药公司：研发和生产药物。\n\
+            \        4. 政府卫生部门：负责公共卫生政策和监管。\n        这些机构之间的关系包括合作（医院与制药公司）和监管（政府卫生部门对医院的监管）。\n\
+            \        例如，梅奥诊所（医院）、辉瑞（制药公司）、世界卫生组织（政府卫生部门）等。\n      </output>\n    </example>\n\
+            \    \n    <example>\n      <input>\n        行业：信息技术\n      </input>\n\
+            \      <output>\n        信息技术行业涉及的组织机构包括：\n        1. 软件公司：开发和销售软件产品。\n\
+            \        2. 硬件制造商：生产计算机和其他电子设备。\n        3. IT咨询公司：提供技术咨询和解决方案。\n    \
+            \    4. 行业协会：如信息技术行业协会，促进行业发展。\n        这些机构之间的关系包括合作（软件公司与IT咨询公司）和竞争（硬件制造商之间）。\n\
+            \        例如，微软（软件公司）、英特尔（硬件制造商）、埃森哲（IT咨询公司）等。\n      </output>\n    </example>\n\
+            \  </examples>\n</instruction>\n```"
+        selected: true
+        title: 组织结构
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '17261917186710'
+      position:
+        x: 334
+        y: 525
+      positionAbsolute:
+        x: 334
+        y: 525
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n    <instructions>\n        1. 作为一个资深咨询师，首先明确你所关注的{{#1726190396183.industry#}}行业。\n\
+            \        2. 列出该行业内的重要行业协会，确保包括与通信技术和信息技术相关的协会。\n        3. 对每个协会，提供以下信息：\n\
+            \            - 协会名称\n            - 协会的主要功能\n            - 协会的主要活动\n  \
+            \          - 协会的成果或影响\n        4. 如果有相关的引用或参考资料，请一一列出，并确保引用格式正确。\n   \
+            \     5. 输出内容应简洁明了，避免使用任何XML标签。\n    </instructions>\n    <examples>\n\
+            \        <example>\n            <input>\n                行业: 信息技术\n  \
+            \          </input>\n            <output>\n                1. 信息技术协会 (ITAA)\n\
+            \                   - 功能: 促进信息技术行业的发展与合作\n                   - 活动: 定期举办行业会议和研讨会\n\
+            \                   - 成果: 发布行业报告，推动政策制定\n                2. 国际通信联盟 (ITU)\n\
+            \                   - 功能: 负责全球通信标准的制定\n                   - 活动: 组织国际会议，推动技术标准化\n\
+            \                   - 成果: 制定了多项全球通信标准\n            </output>\n       \
+            \ </example>\n        <example>\n            <input>\n               \
+            \ 行业: 通信行业\n            </input>\n            <output>\n             \
+            \   1. 国际电信联盟 (ITU)\n                   - 功能: 促进全球电信服务的可持续发展\n       \
+            \            - 活动: 举办全球电信展览和论坛\n                   - 成果: 促进了全球电信基础设施的建设\n\
+            \                2. 美国通信协会 (NCTA)\n                   - 功能: 代表美国有线电视和互联网行业\n\
+            \                   - 活动: 进行政策倡导和行业研究\n                   - 成果: 影响了多项通信政策的制定\n\
+            \            </output>\n        </example>\n        <example>\n      \
+            \      <input>\n                行业: 网络安全\n            </input>\n     \
+            \       <output>\n                1. 国际网络安全协会 (ISSA)\n               \
+            \    - 功能: 提供网络安全专业人士的交流平台\n                   - 活动: 举办网络安全培训和认证课程\n \
+            \                  - 成果: 提高了行业内的网络安全意识\n                2. 信息系统审计与控制协会\
+            \ (ISACA)\n                   - 功能: 促进信息系统审计和控制的最佳实践\n               \
+            \    - 活动: 发布行业标准和指南\n                   - 成果: 影响了全球信息系统审计的标准化\n     \
+            \       </output>\n        </example>\n    </examples>\n</instruction>\n\
+            ```"
+        selected: false
+        title: 协会
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '17261917442500'
+      position:
+        x: 334
+        y: 1077
+      positionAbsolute:
+        x: 334
+        y: 1077
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n    <instructions>\n        1. 作为一个资深咨询师，首先明确你所关注的{{#1726190396183.industry#}}行业，并确保你对该行业的组织架构、业务架构、数据架构、技术架构和应用架构有深入的理解。\n\
+            \        2. 列出该行业内的重要行业标准，特别关注与通信技术和信息技术相关的标准。\n        3. 对每个行业标准，提供以下信息：\n\
+            \            - 标准名称\n            - 主要内容概述\n            - 施行时间\n      \
+            \  4. 如果有相关的引用或文献，请一一列出，并确保引用格式正确。\n        5. 输出内容应简洁明了，不包含任何XML标签。\n\
+            \    </instructions>\n    \n    <examples>\n        <example>\n      \
+            \      <input>\n                行业: 通信行业\n            </input>\n     \
+            \       <output>\n                1. 标准名称: ITU-T G.711\n             \
+            \      主要内容: 一种音频编解码标准，广泛用于VoIP。\n                   施行时间: 1988年\n   \
+            \             2. 标准名称: IEEE 802.11\n                   主要内容: 无线局域网标准，定义了无线网络的物理层和数据链路层。\n\
+            \                   施行时间: 1997年\n            </output>\n        </example>\n\
+            \        \n        <example>\n            <input>\n                行业:\
+            \ 信息技术行业\n            </input>\n            <output>\n               \
+            \ 1. 标准名称: ISO/IEC 27001\n                   主要内容: 信息安全管理系统标准，提供信息安全管理的最佳实践。\n\
+            \                   施行时间: 2005年\n                2. 标准名称: ITIL\n     \
+            \              主要内容: IT服务管理框架，帮助组织提高IT服务的质量。\n                   施行时间:\
+            \ 1989年\n            </output>\n        </example>\n        \n       \
+            \ <example>\n            <input>\n                行业: 网络安全行业\n       \
+            \     </input>\n            <output>\n                1. 标准名称: NIST SP\
+            \ 800-53\n                   主要内容: 提供联邦信息系统的安全和隐私控制。\n               \
+            \    施行时间: 2005年\n                2. 标准名称: ISO/IEC 27002\n           \
+            \        主要内容: 信息安全控制的实施指南，补充ISO/IEC 27001。\n                   施行时间:\
+            \ 2005年\n            </output>\n        </example>\n    </examples>\n\
+            </instruction>\n```"
+        selected: false
+        title: 标准
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '17261917446250'
+      position:
+        x: 334
+        y: 939
+      positionAbsolute:
+        x: 334
+        y: 939
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n    <instructions>\n        1. 作为一个资深咨询师，首先明确你所关注的{{#1726190396183.industry#}}行业，并确保你对该行业的法律法规有深入的了解。\n\
+            \        2. 列出该行业内与通信技术和信息技术相关的重要法律法规。\n        3. 对每一条法律法规，提供以下信息：\n\
+            \            - 法律法规的名称\n            - 主要内容概述\n            - 施行时间\n   \
+            \     4. 如果有引用的法律文本或相关资料，请一一列出引用来源。\n        5. 确保输出内容清晰、结构化，并避免使用任何XML标签。\n\
+            \    </instructions>\n    \n    <examples>\n        <example>\n      \
+            \      <input>\n                行业: 金融\n            </input>\n       \
+            \     <output>\n                1. 《中华人民共和国银行法》\n                   -\
+            \ 主要内容: 规范银行的设立、运营及监管。\n                   - 施行时间: 1995年1月1日。\n      \
+            \          2. 《网络安全法》\n                   - 主要内容: 保障网络安全，保护个人信息。\n   \
+            \                - 施行时间: 2017年6月1日。\n            </output>\n        </example>\n\
+            \        \n        <example>\n            <input>\n                行业:\
+            \ 医疗\n            </input>\n            <output>\n                1. 《医疗器械监督管理条例》\n\
+            \                   - 主要内容: 规范医疗器械的生产、销售及使用。\n                   - 施行时间:\
+            \ 2014年1月1日。\n                2. 《个人信息保护法》\n                   - 主要内容:\
+            \ 保护个人信息，规范数据处理行为。\n                   - 施行时间: 2021年11月1日。\n         \
+            \   </output>\n        </example>\n        \n        <example>\n     \
+            \       <input>\n                行业: 教育\n            </input>\n      \
+            \      <output>\n                1. 《中华人民共和国教育法》\n                   -\
+            \ 主要内容: 规定教育的基本制度和方针。\n                   - 施行时间: 1995年1月1日。\n       \
+            \         2. 《网络安全法》\n                   - 主要内容: 保障教育信息化的安全，保护学生信息。\n\
+            \                   - 施行时间: 2017年6月1日。\n            </output>\n      \
+            \  </example>\n    </examples>\n</instruction>\n```"
+        selected: false
+        title: 法律法规
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '17261917449580'
+      position:
+        x: 334
+        y: 801
+      positionAbsolute:
+        x: 334
+        y: 801
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n    <instructions>\n        1. 作为一个资深咨询师，首先明确你所关注的{{#1726190396183.industry#}}行业，并确保你对该行业的组织架构、业务架构、数据架构、技术架构和应用架构有深入的理解。\n\
+            \        2. 列出该行业内的主要从业人员类别，包括但不限于管理层、技术人员、业务分析师、项目经理等。\n        3. 对于每一类从业人员，详细描述他们的职责，包括日常工作内容、决策权、与其他角色的协作方式等。\n\
+            \        4. 列出每类人员所需的资质，包括教育背景、专业技能、行业认证等。\n        5. 提供每类人员的数量估算，尽可能基于行业标准或相关研究数据。\n\
+            \        6. 如果有引用的资料或数据，确保在输出中一一列出引用来源。\n        7. 输出内容应清晰、结构化，并避免使用任何XML标签。\n\
+            \    </instructions>\n    \n    <examples>\n        <example>\n      \
+            \      <input>\n                行业: 通信行业\n            </input>\n     \
+            \       <output>\n                通信行业的从业人员包括：\n                1. 网络工程师\n\
+            \                   - 职责：设计、实施和维护网络基础设施。\n                   - 资质：计算机科学或相关领域的学士学位，CCNA认证。\n\
+            \                   - 数量：约5000人。\n                2. 项目经理\n          \
+            \         - 职责：负责项目的规划、执行和监控。\n                   - 资质：项目管理专业人士（PMP）认证，5年以上相关经验。\n\
+            \                   - 数量：约2000人。\n                引用：行业报告2023。\n     \
+            \       </output>\n        </example>\n        \n        <example>\n \
+            \           <input>\n                行业: 信息技术行业\n            </input>\n\
+            \            <output>\n                信息技术行业的从业人员包括：\n              \
+            \  1. 软件开发工程师\n                   - 职责：负责软件的设计、开发和测试。\n              \
+            \     - 资质：计算机科学学位，熟悉多种编程语言。\n                   - 数量：约10000人。\n     \
+            \           2. 数据分析师\n                   - 职责：分析数据以支持业务决策。\n         \
+            \          - 资质：统计学或相关领域的学位，熟练使用数据分析工具。\n                   - 数量：约3000人。\n\
+            \                引用：2023年IT行业分析报告。\n            </output>\n        </example>\n\
+            \        \n        <example>\n            <input>\n                行业:\
+            \ 金融服务行业\n            </input>\n            <output>\n               \
+            \ 金融服务行业的从业人员包括：\n                1. 财务分析师\n                   - 职责：分析财务数据，提供决策支持。\n\
+            \                   - 资质：金融或会计学位，CFA认证。\n                   - 数量：约4000人。\n\
+            \                2. 风险管理专员\n                   - 职责：识别和评估潜在风险，制定应对策略。\n\
+            \                   - 资质：风险管理相关学位，FRM认证。\n                   - 数量：约1500人。\n\
+            \                引用：金融服务行业2023年报告。\n            </output>\n        </example>\n\
+            \    </examples>\n</instruction>\n```"
+        selected: false
+        title: 从业人员
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '17261917453590'
+      position:
+        x: 361.2076835593175
+        y: 657.7402959564179
+      positionAbsolute:
+        x: 361.2076835593175
+        y: 657.7402959564179
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n    <instructions>\n        1. 作为一个资深咨询师，首先明确你在{{#1726190396183.industry#}}行业领域的专业知识，特别是在企业组织架构、业务架构、数据架构、技术架构和应用架构方面的理解。\n\
+            \        2. 收集和分析最近在{{#1726190396183.industry#}}行业领域内的重大政策变化，特别关注主要国家的政策动态。\n\
+            \        3. 确保你所列出的政策变化是最新的，并且具有重要性，能够影响行业的发展方向。\n        4. 在输出中，按国家分类列出这些政策变化，确保信息清晰易读。\n\
+            \        5. 输出内容不应包含任何XML标签，保持简洁明了。\n    </instructions>\n    <examples>\n\
+            \        <example>\n            <input>\n                行业: 通信和信息技术\n\
+            \            </input>\n            <output>\n                1. 美国：近期出台了《5G技术发展法案》，旨在加速5G网络的部署和应用。\n\
+            \                2. 中国：发布了《数字经济发展战略》，强调推动数字基础设施建设。\n                3.\
+            \ 欧盟：通过了《数字服务法》，加强对在线平台的监管。\n            </output>\n        </example>\n\
+            \        <example>\n            <input>\n                行业: 金融科技\n  \
+            \          </input>\n            <output>\n                1. 英国：实施了《金融服务法》，促进金融科技创新和竞争。\n\
+            \                2. 新加坡：推出了《金融科技战略2025》，支持金融科技企业的发展。\n               \
+            \ 3. 澳大利亚：更新了《反洗钱法》，加强对金融科技公司的监管。\n            </output>\n        </example>\n\
+            \        <example>\n            <input>\n                行业: 可再生能源\n \
+            \           </input>\n            <output>\n                1. 德国：通过了《可再生能源法修正案》，提高可再生能源的使用比例。\n\
+            \                2. 日本：发布了《绿色增长战略》，推动氢能和太阳能的发展。\n                3. 加拿大：实施了《气候变化法》，设定了减排目标和可再生能源投资计划。\n\
+            \            </output>\n        </example>\n    </examples>\n</instruction>\n\
+            ```"
+        selected: false
+        title: 政策
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '17261928696840'
+      position:
+        x: 334
+        y: 1491
+      positionAbsolute:
+        x: 334
+        y: 1491
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n  <instructions>\n    你是一个{{#1726190396183.industry#}}行业的资深咨询师，精通企业组织架构，业务架构，数据架构，技术架构和应用架构，特别擅长通信和信息技术。请根据以下步骤完成任务：\n\
+            \    1. 列出{{#1726190396183.industry#}}行业中重要的媒体。\n    2. 对于每个媒体，提供其关注或擅长的内容，特别是与通信技术和信息技术相关的领域。\n\
+            \    3. 如果有引用，请一一列出引用的来源。\n    4. 确保输出内容不包含任何XML标签。\n  </instructions>\n\
+            \  \n  <examples>\n    <example>\n      <input>\n        行业：通信技术\n   \
+            \   </input>\n      <output>\n        1. 媒体名称：通信世界\n           关注内容：最新的通信技术发展、行业动态、市场分析。\n\
+            \        2. 媒体名称：信息技术周刊\n           关注内容：信息技术趋势、企业案例、技术评测。\n        引用：通信世界官网，信息技术周刊官网。\n\
+            \      </output>\n    </example>\n    \n    <example>\n      <input>\n\
+            \        行业：信息技术\n      </input>\n      <output>\n        1. 媒体名称：IT之家\n\
+            \           关注内容：最新的IT产品评测、技术新闻、行业分析。\n        2. 媒体名称：CIO时代\n       \
+            \    关注内容：企业IT管理、数字化转型、技术战略。\n        引用：IT之家官网，CIO时代官网。\n      </output>\n\
+            \    </example>\n    \n    <example>\n      <input>\n        行业：网络安全\n\
+            \      </input>\n      <output>\n        1. 媒体名称：网络安全观察\n           关注内容：网络安全事件、技术漏洞、行业标准。\n\
+            \        2. 媒体名称：信息安全杂志\n           关注内容：信息安全技术、案例分析、政策法规。\n        引用：网络安全观察官网，信息安全杂志官网。\n\
+            \      </output>\n    </example>\n  </examples>\n</instruction>\n```"
+        selected: false
+        title: 媒体
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '17261928701020'
+      position:
+        x: 334
+        y: 1353
+      positionAbsolute:
+        x: 334
+        y: 1353
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 717085ef-2ed9-484a-9f18-a2243134b837
+          role: system
+          text: "```xml\n<instruction>\n  <instructions>\n    你是一个{{#1726190396183.industry#}}行业的资深咨询师，精通企业组织架构，业务架构，数据架构，技术架构和应用架构，特别擅长通信和信息技术。请根据以下步骤完成任务：\n\
+            \    1. 列出{{#1726190396183.industry#}}行业内的重要行业展会。\n    2. 对于每个展会，提供以下信息：\n\
+            \       - 展会名称\n       - 展会的功能和目的\n       - 展会期间的主要活动\n       - 展会的成果和影响\n\
+            \       - 与通信技术和信息技术相关的协会或组织\n    3. 如果有引用，请确保将引用一一列出，并确保输出中不包含任何XML标签。\n\
+            \    4. 确保信息准确且最新，尽量提供详细的描述。\n  </instructions>\n  \n  <examples>\n  \
+            \  <example>\n      <input>\n        行业：通信技术\n      </input>\n      <output>\n\
+            \        1. 展会名称：世界移动通信大会（MWC）\n           功能：展示最新的移动通信技术和产品。\n      \
+            \     主要活动：技术演示、行业论坛、产品发布。\n           成果：推动了5G技术的普及和应用。\n           相关协会：全球移动通信系统协会（GSMA）。\n\
+            \        2. 展会名称：国际信息技术博览会（IT Expo）\n           功能：聚焦信息技术的最新发展和趋势。\n \
+            \          主要活动：研讨会、展览、网络交流。\n           成果：促进了IT行业的合作与创新。\n         \
+            \  相关协会：信息技术行业协会（ITAA）。\n      </output>\n    </example>\n    \n    <example>\n\
+            \      <input>\n        行业：信息技术\n      </input>\n      <output>\n    \
+            \    1. 展会名称：CES（国际消费电子展）\n           功能：展示消费电子产品和技术。\n           主要活动：产品展示、技术演讲、行业交流。\n\
+            \           成果：推动了智能家居和物联网的发展。\n           相关协会：消费技术协会（CTA）。\n       \
+            \ 2. 展会名称：RSA安全大会\n           功能：专注于网络安全技术和解决方案。\n           主要活动：安全技术演示、专家讲座、网络研讨会。\n\
+            \           成果：提升了企业对网络安全的重视。\n           相关协会：信息系统安全协会（ISSA）。\n     \
+            \ </output>\n    </example>\n    \n    <example>\n      <input>\n    \
+            \    行业：云计算\n      </input>\n      <output>\n        1. 展会名称：AWS re:Invent\n\
+            \           功能：展示亚马逊云服务的最新技术和应用。\n           主要活动：技术讲座、产品发布、网络交流。\n  \
+            \         成果：推动了云计算技术的广泛应用。\n           相关协会：云计算协会（CCA）。\n        2. 展会名称：Google\
+            \ Cloud Next\n           功能：聚焦谷歌云平台的创新和发展。\n           主要活动：技术演示、专家讨论、产品展示。\n\
+            \           成果：促进了云计算行业的合作与发展。\n           相关协会：云计算行业协会（CCIA）。\n     \
+            \ </output>\n    </example>\n  </examples>\n</instruction>\n```"
+        selected: false
+        title: 展会
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: true
+      height: 98
+      id: '17261928705600'
+      position:
+        x: 354
+        y: 1209.5308183932198
+      positionAbsolute:
+        x: 354
+        y: 1209.5308183932198
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: 155.4050888911312
+      y: -40.465269972934095
+      zoom: 0.8324449805019052
